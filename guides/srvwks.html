@@ -5,18 +5,16 @@
 <body>
 <a href="../pages/guides.html">Go back</a><br>
 
-<b>Screenshots are coming soon</b>
-
 <p>It might seem stupid to use Windows Server for workstation use,
 but in my opinion there are good uses for it, such include:<br></p>
 
 1. Performance<br>
 2. Less bloated<br>
-3. You can use any server features when they are needed<br>
+3. You can use any server features when they will be needed<br>
 If this was enough for you to try to do so. I can help you with it using this page right here<br>
 
 <p><h2>Notes</h2><br>
-1. If you are using a Wi-Fi card, you need to enable <b>Wireless LAN Service</b> for it to work<br>
+1. If you are using a Wi-Fi card, you need to enable <b>Wireless LAN Service</b> for your Wi-Fi card to work<br>
 2. Instructions might differ depending on which version of Windows Server you are using,
 these differences will be noted in the article so you shouldn't worry about those differences<br>
 3. In Windows Server 2008, Microsoft added Core SKU. It lacks explorer.exe and similar features,
@@ -45,6 +43,8 @@ then start the service. Now if you are using Windows Server 2003 you can go to T
 or Appearance and change it to Luna theme. However if you are using newer versions,
 you have to continue with this guide<br>
 
+<a href="../images/png/themsrv2003.png"><img src="../images/gif/themsrv2003.gif" width="400" height="300"></a><br>
+
 <h3>Step 2. Enable Desktop Experience <b>(not needed for Windows Server 2003)</b></h3><br>
 
 Do you remember <b>Server Manager</b> that opened before. Well here it comes for
@@ -67,6 +67,8 @@ CTRL-ALT-DEL option. You have to enable this option, continuing with this progra
 We go back and find user account policies, then inside it we find password policy,
 and right there you can remove password restrictions and make password never expire.</p>
 
+<a href="../images/png/cadsrv2003.png"><img src="../images/gif/cadsrv2003.gif" width="400" height="300"></a><br>
+
 <p><h2>Disabling Shutdown Event Tracker</h2><br>
 
 If you had to shutdown or restart already, you have noticed that unlike normal Windows, you have to
@@ -85,6 +87,8 @@ section which should be DEP. In there we change from DEP being used everywhere t
 only for default Windows programs. This will require a restart, if you completed
 everything needed before this, you can restart</p>
 
+<a href="../images/png/depsrv2003.png"><img src="../images/gif/depsrv2003.gif" width="400" height="300"></a><br>
+
 <p><h2>Disabling IE ESC</h2><br>
 
 We are pretty much done with this guide. However, if you tried to use Internet Explorer, 
@@ -92,6 +96,9 @@ likely to download a better browser))), a thing called Internet Explorer Enhance
 is basically being a pain. To disable it, you go to <b>Server Manager</b> and find IE ESC 
 and change from being on for administrators and users, to off for administrators and users</p>
 
-<p>I think this is enough for a guide, I might add new steps later if I think they are
+<a href="../images/png/escsrv2003.png"><img src="../images/gif/escsrv2003.gif" width="400" height="300"></a><br>
+The method I wrote above this image only works on Server 2008 or later, this images shows a way to do it on Server 2003 (R2)<br>
+
+<p>I think this is enough for a guide, I might add new steps later if I think they would be
 needed</p>
 </body>
