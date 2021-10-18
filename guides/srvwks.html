@@ -2,10 +2,14 @@
 <title>Converting Windows Server for workstation use</title>
 </head>
 
-<body>
-<a href="../pages/guides.html">Go back</a><br>
+<body bgcolor="#1f1f1f" text="#ffffff" link="#e8803c" vlink="#e8803c">
+<center>
+<table border="2" cellpadding="2" cellspacing="2" width="80">
+<tr><th><a href="../pages/guides.html">Go back</a><br></th></tr>
+</table>
 
-<p>It might seem stupid to use Windows Server for workstation use,
+<table border="2" cellpadding="2" cellspacing="2" width="800">
+<tr><th><p>It might seem stupid to use Windows Server for workstation use,
 but in my opinion there are good uses for it, such include:<br></p>
 
 1. Performance<br>
@@ -13,19 +17,25 @@ but in my opinion there are good uses for it, such include:<br></p>
 3. You can use any server features when they will be needed<br>
 If this was enough for you to try to do so. I can help you with it using this page right here<br>
 
-<p><h2>Notes</h2><br>
+</tr></th>
+
+<tr><th><p><h2>Notes</h2><br>
 1. If you are using a Wi-Fi card, you need to enable <b>Wireless LAN Service</b> for your Wi-Fi card to work<br>
 2. Instructions might differ depending on which version of Windows Server you are using,
 these differences will be noted in the article so you shouldn't worry about those differences<br>
 3. In Windows Server 2008, Microsoft added Core SKU. It lacks explorer.exe and similar features,
 if you came to Windows Server to have such features, you should pick non-core SKU</p>
 
-<p><h2>Installation</h2><br>
+</tr></th>
+
+<tr><th><p><h2>Installation</h2><br>
 
 Installation should be very easy. Since there are no differences between Client Windows installer and Server Windows installer.
 Most parts of OOBE are skipped though. In Windows Server it's usually only password and nothing else</p>
 
-<p><h2>Themes</h2><br>
+</tr></th>
+
+<tr><th><p><h2>Themes</h2><br>
 <b>This step is not needed for Windows Server 2016 or newer</b><br>
 
 After installation and logging in to the desktop, you might have noticed that theme is
@@ -55,7 +65,9 @@ role to add, you just press Next without choosing anything), after doing it. You
 next, after your computer restarts you can use Aero or Aero Basic theme, currently while
 it's installing, we can continue with next sections of this guide</p>
 
-<p><h2>Disabling requirement for CTRL-ALT-DEL and password restrictions</h2><br>
+</tr></th>
+
+<tr><th><p><h2>Disabling requirement for CTRL-ALT-DEL and password restrictions</h2><br>
 
 You might have noticed that Windows Server requires pressing CTRL-ALT-DEL to logon,
 plus password requirements are pretty strict,
@@ -69,7 +81,9 @@ and right there you can remove password restrictions and make password never exp
 
 <a href="../images/png/cadsrv2003.png"><img src="../images/gif/cadsrv2003.gif" width="400" height="300"></a><br>
 
-<p><h2>Disabling Shutdown Event Tracker</h2><br>
+</tr></th>
+
+<tr><th><p><h2>Disabling Shutdown Event Tracker</h2><br>
 
 If you had to shutdown or restart already, you have noticed that unlike normal Windows, you have to
 specify a reason to shutdown or restart. This can be explained for servers, but for
@@ -78,7 +92,9 @@ instead of <b>services.msc</b>, we type <b>gpedit.msc</b>. Then we go to Compute
 configuration - Administrative templates - System, then there we find Display
 Shutdown Event Tracker, we change the option from <b>Not configured</b>, to <b>Disabled</b></p>
 
-<p><h2>Performance and DEP</h2><br>
+</tr></th>
+
+<tr><th><p><h2>Performance and DEP</h2><br>
 
 Now in <b>Performance</b> tab, for getting the most client Windows look I recommend
 you to change Performance settings to ones for best appearance. In advanced, we
@@ -89,7 +105,9 @@ everything needed before this, you can restart</p>
 
 <a href="../images/png/depsrv2003.png"><img src="../images/gif/depsrv2003.gif" width="400" height="300"></a><br>
 
-<p><h2>Disabling IE ESC</h2><br>
+</tr></th>
+
+<tr><th><p><h2>Disabling IE ESC</h2><br>
 
 We are pretty much done with this guide. However, if you tried to use Internet Explorer, 
 likely to download a better browser))), a thing called Internet Explorer Enhanced Security 
@@ -99,6 +117,10 @@ and change from being on for administrators and users, to off for administrators
 <a href="../images/png/escsrv2003.png"><img src="../images/gif/escsrv2003.gif" width="400" height="300"></a><br>
 The method I wrote above this image only works on Server 2008 or later, this images shows a way to do it on Server 2003 (R2)<br>
 
-<p>I think this is enough for a guide, I might add new steps later if I think they would be
-needed</p>
+</tr></th>
+
+<tr><th><p>I think this is enough for a guide, I might add new steps later if I think they would be
+needed</p></tr></th>
+</table>
+</center>
 </body>
