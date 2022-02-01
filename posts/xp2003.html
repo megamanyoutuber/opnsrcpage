@@ -14,7 +14,7 @@
 <p>
 While it may look like that this is Windows XP, this is not actually Windows XP! This is actually Windows Server 2003 with Welcome Screen enabled.
 Turns out all you have to do to get it is to use TweakNT to change SKU to one of Workstation SKUs, then in Registry Editor - Go to
-[HKEY_LOCAL_MACHINE\SOFTWARAE\Mirosoft\Windows NT\CurrentVersion\Winlogon], add DWORD value with a name of LogonType, set it 1.
+[HKEY_LOCAL_MACHINE\SOFTWARE\Mirosoft\Windows NT\CurrentVersion\Winlogon], add DWORD value with a name of LogonType, set it 1.
 To check if you enabled it correctly, try pressing log off or shutdown buttons, if it's changed, then you did everything correctly.
 Downside to this is, due to the fact you changed your SKU to XP and the fact that 32 bit Windows XP SKU with a build number 3790 never existed,
 updates will not work. Before doing all this, I recommend to update your system if you ever want to update and have XP's Welcome Screen.
