@@ -3,124 +3,110 @@
 </head>
 
 <body bgcolor="#1f1f1f" text="#ffffff" link="#e8803c" vlink="#e8803c">
-<center>
-<table border="2" cellpadding="2" cellspacing="2" width="80">
-<tr><th><a href="../pages/guides.html">Go back</a><br></th></tr>
-</table>
+<table border="2" cellpadding="2" cellspacing="2" style="font-size:14px;">
+<tr>
+<!-- Left header -->
+<td class="left-header" bgcolor="#965000" width="150" valign="top">
+<p>Pages</p>
+<a href=../index.html>Homepage</a><br>
+<a href="../pages/posts.html">Posts</a><br>
+<a href="../pages/guides.html">Guides</a><br>
+<p>Links:</p>
+<a href="https://discord.gg/xDdWNpGeq8">Discord</a><br>
+</td>
+<!-- End of left header -->
 
-<table border="2" cellpadding="2" cellspacing="2" width="800">
-<tr><th><p>It might seem stupid to use Windows Server for workstation use,
-but in my opinion there are good uses for it, such include:<br></p>
+<td>
+<p>It might seem weird to use a server release of Windows as your main operating system,
+but there are many advantages (in my opinion) to using a server release such as:<br></p>
 
 1. Performance<br>
-2. Less bloated<br>
-3. You can use any server features when they will be needed<br>
+2. Less programs included (and so less bloat)<br>
+3. You also have an option of using server features such as WDS if you need to<br>
 If this was enough for you to try to do so. I can help you with it using this page right here<br>
 
-</tr></th>
-
-<tr><th><p><h2>Notes</h2><br>
+<p><h2>Notes</h2><br>
 1. If you are using a Wi-Fi card, you need to enable <b>Wireless LAN Service</b> for your Wi-Fi card to work<br>
-2. Instructions might differ depending on which version of Windows Server you are using,
-these differences will be noted in the article so you shouldn't worry about those differences<br>
-3. In Windows Server 2008, Microsoft added Core SKU. It lacks explorer.exe and similar features,
-if you came to Windows Server to have such features, you should pick non-core SKU</p>
+2. Instructions might be different depending on your Windows Server release (those differences will be noted)<br>
+3. Since Windows Server 2008, there is a core variation of a normal SKU, it lacks Explorer and is limited to a command prompt.
+If you (likely) came for desktop experience, you will need to choose a normal variant of Windows Server. As a note, some Windows 10 based
+server releases only have Core as an option. You will have to use Long Term version of Windows Server to have a desktop experience.</p>
 
-</tr></th>
+<p><h2>Installation</h2><br>
 
-<tr><th><p><h2>Installation</h2><br>
+Installation is exactly the same as on client releases. This was noted, but again - Windows Server 2008 introduced a
+core variation of every SKU, and if you want desktop experience, you will have to choose the normal variant.</p>
 
-Installation should be very easy. Since there are no differences between Client Windows installer and Server Windows installer.
-Most parts of OOBE are skipped though. In Windows Server it's usually only password and nothing else</p>
+<p><h2>Themes</h2><br>
+<b>Themes no longer require manual configuration on Windows Server 2016 and later</b><br>
 
-</tr></th>
-
-<tr><th><p><h2>Themes</h2><br>
-<b>This step is not needed for Windows Server 2016 or newer</b><br>
-
-After installation and logging in to the desktop, you might have noticed that theme is
-either <b>Classic Theme</b> or <b>Aero Lite Theme</b>, there are a lot of people who like
-those themes. But it's not for everyone so you might like to get default Client Windows
-theme<br>
+If you have already installed a server release of Windows. You have likely noticed that there are no themes available
+except the classic theme. If you prefer the classic theme, you can go ahead and skip this. But if you want Aero, Luna, etc.
+You will have to follow those steps.
 
 <h3>Step 1. Enable Themes service<br></h3>
 
-To enable Themes service you need to open <b>Run</b> prompt and type <b>services.msc</b>,
-after that you will see a window open, in it you have to find a service called <b>Themes</b>
-(it might be translated to your native language if you haven't chosen English). After
-finding it, you have to change from service being disabled to start automatically, and
-then start the service. Now if you are using Windows Server 2003 you can go to Themes
-or Appearance and change it to Luna theme. However if you are using newer versions,
-you have to continue with this guide<br>
+<b>This step should be ignored if you are on Windows Server 2012 and later</b><br>
+
+To enable themes on Windows Server 2003 and later, you must open services.msc, find the Themes service. Once you have found it,
+you need to right click on the service, properties, then change the startup type to Automatic. Once you have done that,
+you can start the service. If you are on Windows Server 2003, you can already go to appearance settings and you will see
+the stupid theme (Luna) that you know.<br>
 
 <a href="../images/png/themsrv2003.png"><img src="../images/gif/themsrv2003.gif" width="400" height="300"></a><br>
 
 <h3>Step 2. Enable Desktop Experience <b>(not needed for Windows Server 2003)</b></h3><br>
 
-Do you remember <b>Server Manager</b> that opened before. Well here it comes for
-our needs. First, click on <b>Add Features</b> 
-(Note: in Windows Server 2012 it's called Add Features and Roles, after it asks for
-role to add, you just press Next without choosing anything), after doing it. You choose 
-<b>Desktop Experience</b>, agree with adding anything that it asks for. After this you press
-next, after your computer restarts you can use Aero or Aero Basic theme, currently while
-it's installing, we can continue with next sections of this guide</p>
+Once you started a server release of Windows, you might have noticed that there was a program with the name "Server Manager"
+that appeared once you logged on. Well, it can add various features, and it can add a feature that we need to get themes!
+(Note: in Windows Server 2012 you have to go to Add Features and Roles, in order to choose features,
+you must skip choosing the roles by pressing next without choosing anything) Once you opened it, 
+choose Dekstop Experience, agree to enable everything that it asks to enable. After rebooting, you can enable themes.</p>
 
-</tr></th>
+<p><h2>Disabling requirement for CTRL-ALT-DEL and password restrictions</h2><br>
 
-<tr><th><p><h2>Disabling requirement for CTRL-ALT-DEL and password restrictions</h2><br>
-
-You might have noticed that Windows Server requires pressing CTRL-ALT-DEL to logon,
-plus password requirements are pretty strict,
-this might not be what you like, and thankfully it can be disabled. To disable it.
-First open Control Panel, then Administrative Tools, and double click on 
-<b>Local Security Policy</b>. next, go to Local policies, then Security options,
-then after looking through everything inside it, you will find Do not require
-CTRL-ALT-DEL option. You have to enable this option, continuing with this program.
-We go back and find user account policies, then inside it we find password policy,
+If you have started up a Windows server before, you might have noticed that to log on, you must press CTRL-ALT-DEL
+as you did on earlier releases of Windows. You might not be a fan of this feature, thankfully, it can be disabled.
+To disable it, first open the Control Panel, then Administrative Tools, and double click on 
+Local Security Policy. next, go to Local policies, then Security options,
+then find Do not require CTRL-ALT-DEL option, You have to enable this option. Continuing with this program.
+We go back and find user account policies, then inside it we go to password policy,
 and right there you can remove password restrictions and make password never expire.</p>
 
 <a href="../images/png/cadsrv2003.png"><img src="../images/gif/cadsrv2003.gif" width="400" height="300"></a><br>
 
-</tr></th>
-
-<tr><th><p><h2>Disabling Shutdown Event Tracker</h2><br>
+<p><h2>Disabling Shutdown Event Tracker</h2><br>
 
 If you had to shutdown or restart already, you have noticed that unlike normal Windows, you have to
-specify a reason to shutdown or restart. This can be explained for servers, but for
-clients this is pretty annoying. To fix this we run <b>Run</b> prompt again, but now
-instead of <b>services.msc</b>, we type <b>gpedit.msc</b>. Then we go to Computer
-configuration - Administrative templates - System, then there we find Display
-Shutdown Event Tracker, we change the option from <b>Not configured</b>, to <b>Disabled</b></p>
+specify a reason to shutdown or restart. This is explainable for servers, but for
+clients this normally makes no sense (unless you are on a domain I suppose). To fix this you need to run
+gpedit.msc, then you go to Computer
+configuration - Administrative templates - System, then there you find Display
+Shutdown Event Tracker, you should change the option from Not configured, to Disabled</p>
 
-</tr></th>
-
-<tr><th><p><h2>Performance and DEP</h2><br>
+<p><h2>Performance and DEP</h2><br>
 
 Now in <b>Performance</b> tab, for getting the most client Windows look I recommend
 you to change Performance settings to ones for best appearance. In advanced, we
-change optimizations from Background applications to Programs, after that we go to 3rd
-section which should be DEP. In there we change from DEP being used everywhere to
+change optimizations from Background applications to Programs, after that you go to the third
+section which should be DEP. In there you can change DEP from being used everywhere to
 only for default Windows programs. This will require a restart, if you completed
-everything needed before this, you can restart</p>
+everything needed before this, you can safely restart.</p>
 
 <a href="../images/png/depsrv2003.png"><img src="../images/gif/depsrv2003.gif" width="400" height="300"></a><br>
 
-</tr></th>
+<p><h2>Disabling IE ESC</h2><br>
 
-<tr><th><p><h2>Disabling IE ESC</h2><br>
-
-We are pretty much done with this guide. However, if you tried to use Internet Explorer, 
+You are done with this guide. However, if you tried to use Internet Explorer, 
 likely to download a better browser))), a thing called Internet Explorer Enhanced Security 
-is basically being a pain. To disable it, you go to <b>Server Manager</b> and find IE ESC 
-and change from being on for administrators and users, to off for administrators and users</p>
+tries to stop you from going to any web page that you want to go to. 
+To disable it, you have to go to Server Manager and find IE ESC 
+and change settings from being on for administrators and users, to off for administrators and users</p>
 
 <a href="../images/png/escsrv2003.png"><img src="../images/gif/escsrv2003.gif" width="400" height="300"></a><br>
 The method I wrote above this image only works on Server 2008 or later, this images shows a way to do it on Server 2003 (R2)<br>
 
-</tr></th>
-
-<tr><th><p>I think this is enough for a guide, I might add new steps later if I think they would be
-needed</p></tr></th>
+<p>I'm sure that this is enough for a Workstation conversion in my opinion.</p></td>
+</tr>
 </table>
-</center>
 </body>
