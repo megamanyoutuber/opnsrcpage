@@ -1,0 +1,112 @@
+/* 
+A CSS style style. I'm not really good at CSS files, but here I go!
+I fucking love flexboxes.
+*/
+
+* {margin: 0; padding: 0;}
+
+body {
+    font-family: "Ubuntu", serif;
+    min-height: 100%;
+    background: linear-gradient(to bottom, #696f75, #8e9aa7);
+    background-attachment: fixed;
+}
+
+/* .website-container: Row-Flexbox. Will be horizontal so the website would also be horizontal. */
+.website-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    min-height: 100%;
+}
+
+/* .website-header: Column-Flexbox. Will be vertical so the header would take less space horizontally. */
+.website-header {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    width: 12%;
+    height: 100vh;
+    background: linear-gradient(to bottom, #e6800d, #ffb157);
+    border-right: 2.5px solid #c4761d;
+    font-size: 1.75em; /* ems are better for sizing apparently */
+}
+.website-header > * {
+    padding-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin: 0px 10px;
+}
+
+/* Links because I love links */
+
+p {
+    color: white;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    transition: text-shadow 0.15s;
+}
+
+a:hover, a:active {
+    text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #fff,
+    0 0 82px #fff,
+    0 0 92px #fff,
+    0 0 102px #fff,
+    0 0 151px #fff;
+}
+
+/* .website-content: Column-Flexbox(?). Vertical, it will likely be easier to place images that way. */
+.website-content {
+    display: flex;
+    flex-direction: column;
+    width: 88%;
+    height: 100%;
+    margin-left: auto;
+    font-size: 1.5em;
+}
+
+h1 { font-size: 1.85em; }
+
+h2 { font-size: 1.75em; }
+
+h3 { font-size: 1.65em; }
+
+.website-content > * {
+    padding-left: 15px; /* should make padding less weird hopefully */
+    padding-right: 15px;
+    padding-top: 4.5px;
+    margin: 5px;
+}
+
+.website-content > br {
+    padding-right: 10px;
+}
+
+/* making the website look less retarded on mobile */
+
+@media screen and (max-width: 900px) {
+    .website-container {
+        flex-direction: column;
+    }
+    .website-content {
+        width: 100%;
+        max-height: 88%;
+        margin-left: 0;
+        margin-bottom: auto;
+    }
+
+    .website-header {
+        position: static;
+        width: 100%;
+        height: 12%;
+        border-right: 0px;
+        border-bottom: 3px solid #c4761d;
+    }
+  }
