@@ -74,11 +74,11 @@ a:hover, a:active {
     font-size: 1.25em;
 }
 
-h1 { font-size: 1.85em; }
+h1 { font-size: 1.55em; color: white; }
 
-h2 { font-size: 1.75em; }
+h2 { font-size: 1.45em; color: white; }
 
-h3 { font-size: 1.65em; }
+h3 { font-size: 1.35em; color: white; }
 
 .website-content > * {
     padding-left: 15px; /* should make padding less weird hopefully */
@@ -108,7 +108,5 @@ h3 { font-size: 1.65em; }
         position: static;
         width: 100%;
         height: 12%;
-        border-right: 0px;
-        border-bottom: 3px solid #c4761d;
     }
   }
