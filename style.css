@@ -8,7 +8,8 @@ I fucking love flexboxes.
 body {
     font-family: "Ubuntu", serif;
     min-height: 100%;
-    background: linear-gradient(to bottom, #696f75, #8e9aa7);
+    /* background: linear-gradient(to bottom, #696f75, #8e9aa7); */
+	background: #1f1f1f;
     background-attachment: fixed;
 }
 
@@ -27,9 +28,10 @@ body {
     position: fixed;
     width: 12%;
     height: 100vh;
-    background: linear-gradient(to bottom, #e6800d, #ffb157);
-    border-right: 2.5px solid #c4761d;
-    font-size: 1.75em; /* ems are better for sizing apparently */
+    /* background: linear-gradient(to bottom, #e6800d, #ffb157); */
+	background: #965000;
+    /* border-right: 2.5px solid #c4761d; */
+    font-size: 1.35em; /* ems are better for sizing apparently */
 }
 .website-header > * {
     padding-top: 10px;
@@ -45,7 +47,7 @@ p {
 }
 
 a {
-    color: black;
+    color: #e8803c;
     text-decoration: none;
     transition: text-shadow 0.15s;
 }
@@ -69,7 +71,7 @@ a:hover, a:active {
     width: 88%;
     height: 100%;
     margin-left: auto;
-    font-size: 1.5em;
+    font-size: 1.25em;
 }
 
 h1 { font-size: 1.85em; }
