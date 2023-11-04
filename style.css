@@ -5,11 +5,18 @@ I fucking love flexboxes.
 
 * {margin: 0; padding: 0;}
 
+/* The return of the one and only, Terminus! */
+
+@font-face {
+    font-family: "Terminus (TTF)";
+    src: url("https://megamanyoutuber.github.io/terminus.ttf") format("truetype");
+}
+
 body {
-    font-family: "Ubuntu", serif;
+	font-family: "Terminus (TTF)";
     min-height: 100%;
     /* background: linear-gradient(to bottom, #696f75, #8e9aa7); */
-	background: #1f1f1f;
+	  background: #1f1f1f;
     background-attachment: fixed;
 }
 
