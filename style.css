@@ -15,8 +15,8 @@ I fucking love flexboxes.
 body {
 	font-family: "Terminus (TTF)";
     min-height: 100%;
-    /* background: linear-gradient(to bottom, #696f75, #8e9aa7); */
-	  background: #1f1f1f;
+    background: linear-gradient(to top, #780116, #EF6461);
+	/* background: #1f1f1f; */
     background-attachment: fixed;
 }
 
@@ -35,8 +35,8 @@ body {
     position: fixed;
     width: 12%;
     height: 100vh;
-    /* background: linear-gradient(to bottom, #e6800d, #ffb157); */
-	background: #965000;
+    background: linear-gradient(to bottom, #DB7C26, #D8572A);
+	/* background: #965000; */
     /* border-right: 2.5px solid #c4761d; */
     font-size: 1.35em; /* ems are better for sizing apparently */
 }
@@ -54,7 +54,8 @@ p {
 }
 
 a {
-    color: #e8803c;
+    /* color: #e8803c; */
+    color: yellow;
     text-decoration: none;
     transition: text-shadow 0.15s;
 }
