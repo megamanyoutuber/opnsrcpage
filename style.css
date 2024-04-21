@@ -3,7 +3,7 @@ A CSS style style. I'm not really good at CSS files, but here I go!
 I fucking love flexboxes.
 */
 
-* {margin: 0; padding: 0;}
+{margin: 0; padding: 0;}
 
 /* The return of the one and only, Terminus! */
 
@@ -15,8 +15,8 @@ I fucking love flexboxes.
 body {
 	font-family: "Terminus (TTF)";
     min-height: 100%;
-    background: linear-gradient(to top, #780116, #EF6461);
-	/* background: #1f1f1f; */
+    /*background: linear-gradient(to top, #780116, #EF6461); */
+	background: #292929;
     background-attachment: fixed;
 }
 
@@ -24,21 +24,27 @@ body {
 .website-container {
     display: flex;
     flex-direction: row;
-    width: 100%;
-    min-height: 100%;
+    width: 75%;
+    min-height: 95vh;
+    margin-top: 2px;
+    margin: auto;
+    border-style: ridge;
+    border-width: 5px;
+    border-color: #ffa33b;
+    /*transform: translate(0%, 1.5%); /* сука шо це за херня і чого мені потрібно це додавати */
 }
 
 /* .website-header: Column-Flexbox. Will be vertical so the header would take less space horizontally. */
 .website-header {
     display: flex;
     flex-direction: column;
-    position: fixed;
+    /* position: fixed; */
     width: 12%;
-    height: 100vh;
-    background: linear-gradient(to bottom, #DB7C26, #D8572A);
-	/* background: #965000; */
+    min-height: 100%;
+    /* background: linear-gradient(to bottom, #DB7C26, #D8572A); */
+	background: #ff6d66;
     /* border-right: 2.5px solid #c4761d; */
-    font-size: 1.35em; /* ems are better for sizing apparently */
+    font-size: 1.25em;
 }
 .website-header > * {
     padding-top: 10px;
@@ -55,7 +61,7 @@ p {
 
 a {
     /* color: #e8803c; */
-    color: yellow;
+    color: #fff280;
     text-decoration: none;
     transition: text-shadow 0.15s;
 }
@@ -77,9 +83,10 @@ a:hover, a:active {
     display: flex;
     flex-direction: column;
     width: 88%;
-    height: 100%;
+    min-height: 100%;
     margin-left: auto;
-    font-size: 1.25em;
+    font-size: 1.15em;
+    background-color: #c90d04;
 }
 
 h1 { font-size: 1.65em; color: white; }
@@ -101,8 +108,13 @@ h3 { font-size: 1.15em; color: white; }
 
 /* making the website look less retarded on mobile */
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1100px) {
     .website-container {
+		min-width: 100%;
+		min-height: 100%;
+		border: none;
+		margin-top: none;
+		margin: none;
         flex-direction: column;
     }
     .website-content {
