@@ -1,0 +1,97 @@
+/*
+A style CSS file for my webpage, nothing special about it really
+
+:3
+*/
+
+/* Changing color section */
+::-moz-selection { /* Code for Firefox */
+  background-color: #5abbe8;
+  color: #ffffff;
+}
+
+::selection {
+  background-color: #5abbe8;
+  color: #ffffff;
+}
+
+/* Everything else */
+@font-face {
+  src: url("../fonts/basiic.ttf");
+  font-family: "basiic"
+}
+
+body, nav, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /* Setting colors so browsers wouldnt override them */
+  background-color: #ffffff;
+  color: #000000;
+  font-family: "basiic", serif;
+  font-size: 16px;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  border-bottom: 2px solid #000000;
+  background-color: #ffffff;
+}
+
+nav ul {
+  display: flex;
+  justify-content: end;
+}
+
+nav li {
+  list-style-type: none;
+}
+
+nav a {
+  display: inline-block;
+  color: #000000;
+  text-decoration: none;
+  padding: 8px;
+}
+
+#logo {
+  position: fixed;
+  left: 0;
+  padding: 8px;
+}
+
+#logo:hover { cursor: default; }
+
+nav a:hover, #logo:hover {
+  background-color: #5abbe8;
+  color: #ffffff;
+}
+
+main {
+  width: 640px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid #000000;
+}
+
+main * {
+  margin: 8px;
+}
+
+main a {
+  color: #5abbe8;
+}
+
+main img {
+  width: 320px;
+}
+
+main figcaption, .small {
+  font-size: 12px;
+  color: #808080;
+}
