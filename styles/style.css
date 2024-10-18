@@ -95,3 +95,15 @@ main figcaption, .small {
   font-size: 12px;
   color: #808080;
 }
+
+@media screen and (max-width: 800px) {
+  main {
+    border-left: 0px;
+    border-right: 0px;
+    width: 100%;
+  }
+
+  #logo {
+    visibility: hidden;
+  }
+}
