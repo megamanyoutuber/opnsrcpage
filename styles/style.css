@@ -97,6 +97,10 @@ main figcaption, .small {
 }
 
 @media screen and (max-width: 800px) {
+  nav ul {
+    justify-content: center;
+  }
+
   main {
     border-left: 0px;
     border-right: 0px;
