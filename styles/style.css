@@ -16,10 +16,12 @@ A style CSS file for my webpage, nothing special about it really
 }
 
 /* Everything else */
+/* Font 1: Main */
 @font-face {
   src: url("../fonts/basiic.ttf");
   font-family: "basiic"
 }
+
 
 body, nav, ul, li {
   margin: 0;
@@ -96,7 +98,7 @@ main figcaption, .small {
   color: #808080;
 }
 
-@media screen and (max-width: 800px) {
+@media only screen and (orientation: portrait) {
   nav ul {
     justify-content: center;
   }
