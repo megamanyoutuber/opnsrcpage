@@ -19,7 +19,7 @@ A style CSS file for my webpage, nothing special about it really
 /* Font 1: Main */
 @font-face {
   src: url("../fonts/basiic.ttf");
-  font-family: "basiic"
+  font-family: "basiic";
 }
 
 
@@ -31,6 +31,7 @@ body, nav, ul, li {
 body {
   /* Setting colors so browsers wouldnt override them */
   background-color: #ffffff;
+  background-image: url("../images/background.gif");
   color: #000000;
   font-family: "basiic", serif;
   font-size: 16px;
@@ -73,6 +74,7 @@ nav a:hover, #logo:hover {
 }
 
 main {
+  background-color: #ffffff;
   width: 640px;
   margin-top: 16px;
   margin-bottom: 16px;
